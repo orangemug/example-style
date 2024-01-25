@@ -1,0 +1,41 @@
+{
+    "version": 8,
+    "name": "Example style",
+    "glyphs": "https://orangemug.github.io/font-glyphs/glyphs/{fontstack}/{range}.pbf",
+    "sprite": "",
+    "sources": {
+        "land": {
+          "type": "geojson",
+          "data": "https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_land.geojson"
+        }
+    },
+    "layers": [
+      {
+        "id": "background",
+        "type": "background",
+        "paint": {
+          "background-color": "#ffffff"
+        }
+      },
+      {
+        "id": "land",
+        "type": "fill",
+        "source": "land",
+        "source-layer": "",
+        "layout": {},
+        "paint": {
+          "fill-color": "hsla(0, 0%, 70%, 1)"
+        }
+      },
+      {
+        "id": "coastline",
+        "type": "line",
+        "source": "land",
+        "source-layer": "",
+        "layout": {},
+        "paint": {
+          "line-color": "hsla(0, 0%, 52%, 1)"
+        }
+      }
+    ]
+  }
